@@ -1,0 +1,162 @@
+name: KnCore
+version: '1.0'
+main: pl.core.knCore.KnCore
+api-version: '1.21'
+load: STARTUP
+authors: [ knypcio ]
+description: Core plugin by knypcio.
+softdepend: [PlaceholderAPI]
+commands:
+  feed:
+    description: Przywraca głód graczowi
+    usage: /feed [gracz]
+    permission: core.feed
+  heal:
+    description: Przywraca zdrowie graczowi
+    usage: /heal [gracz]
+    permission: core.heal
+  fly:
+    description: Włącza/wyłącza latanie
+    usage: /fly [gracz]
+    permission: core.fly
+  god:
+    description: Włącza/wyłącza tryb nieśmiertelności
+    usage: /god [gracz]
+    permission: core.god
+  speed:
+    description: Ustawia prędkość poruszania
+    usage: /speed <1-10> [gracz]
+    permission: core.speed
+  gamemode:
+    description: Zmienia tryb gry
+    usage: /gm <tryb> [gracz]
+    aliases: [gm]
+    permission: core.gamemode
+  teleport:
+    description: Teleportuje gracza
+    usage: /tp <gracz> [cel]
+    aliases: [tp]
+    permission: core.teleport
+  time:
+    description: Zmienia czas na świecie
+    usage: /time <set|add> <wartość>
+    permission: core.time
+  weather:
+    description: Zmienia pogodę
+    usage: /weather <clear|rain|thunder>
+    permission: core.weather
+  vanish:
+    description: Włącza/wyłącza niewidzialność
+    usage: /vanish [gracz]
+    aliases: [ v ]
+    permission: core.vanish
+  repair:
+    description: Naprawia przedmiot w ręce
+    usage: /repair
+    permission: core.repair
+  repairall:
+    description: Naprawia wszystkie przedmioty
+    usage: /repairall [gracz]
+    permission: core.repairall
+  afk:
+    description: Włącza/wyłącza tryb nieobecności
+    usage: /afk [powód]
+    permission: core.afk
+  core:
+    description: Główna komenda pluginu
+    usage: /core <reload|info>
+    permission: core.admin
+  ping:
+    description: Sprawdza opóźnienie gracza
+    usage: /ping [gracz]
+    permission: core.ping
+  tps:
+    description: Sprawdza wydajność serwera
+    usage: /tps
+    permission: core.tps
+  uptime:
+    description: Sprawdza czas działania serwera
+    usage: /uptime
+    permission: core.uptime
+  broadcast:
+    description: Wysyła wiadomość do wszystkich
+    usage: /broadcast <wiadomość>
+    aliases: [ bc ]
+    permission: core.broadcast
+
+permissions:
+  core.*:
+    description: Wszystkie uprawnienia Core
+    children:
+      core.feed: true
+      core.heal: true
+      core.fly: true
+      core.god: true
+      core.speed: true
+      core.gamemode: true
+      core.teleport: true
+      core.time: true
+      core.weather: true
+      core.vanish: true
+      core.repair: true
+      core.repairall: true
+      core.afk: true
+      core.admin: true
+      core.ping: true
+      core.tps: true
+      core.uptime: true
+      core.broadcast: true
+  core.feed:
+    description: Pozwala używać komendy /feed
+    default: op
+  core.heal:
+    description: Pozwala używać komendy /heal
+    default: op
+  core.fly:
+    description: Pozwala używać komendy /fly
+    default: op
+  core.god:
+    description: Pozwala używać komendy /god
+    default: op
+  core.speed:
+    description: Pozwala używać komendy /speed
+    default: op
+  core.gamemode:
+    description: Pozwala używać komendy /gamemode
+    default: op
+  core.teleport:
+    description: Pozwala używać komendy /teleport
+    default: op
+  core.time:
+    description: Pozwala używać komendy /time
+    default: op
+  core.weather:
+    description: Pozwala używać komendy /weather
+    default: op
+  core.vanish:
+    description: Pozwala używać komendy /vanish
+    default: op
+  core.repair:
+    description: Pozwala używać komendy /repair
+    default: op
+  core.repairall:
+    description: Pozwala używać komendy /repairall
+    default: op
+  core.afk:
+    description: Pozwala używać komendy /afk
+    default: true
+  core.admin:
+    description: Pozwala używać komend administracyjnych
+    default: op
+  core.ping:
+    description: Pozwala używać komendy /ping
+    default: true
+  core.tps:
+    description: Pozwala używać komendy /tps
+    default: op
+  core.uptime:
+    description: Pozwala używać komendy /uptime
+    default: true
+  core.broadcast:
+    description: Pozwala używać komendy /broadcast
+    default: op

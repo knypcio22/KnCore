@@ -1,0 +1,138 @@
+# Użyj & dla kolorów (np. &a = zielony, &c = czerwony)
+
+messages:
+  # Podstawowe wiadomości błędów
+  no-permission: "&cNie masz uprawnień do tej komendy!"
+  player-not-found: "&cNie znaleziono gracza: {player}"
+  console-not-allowed: "&cTa komenda może być używana tylko przez graczy!"
+
+  # Komendy feed i heal
+  feed:
+    success: "&aWysycenie zostało przywrócone!"
+    other: "&aWysycenie gracza {player} zostało przywrócone!"
+
+  heal:
+    success: "&aZdrowie zostało przywrócone!"
+    other: "&aZdrowie gracza {player} zostało przywrócone!"
+
+  # Komenda fly
+  fly:
+    enabled: "&aLatanie zostało włączone!"
+    disabled: "&cLatanie zostało wyłączone!"
+    other-enabled: "&aLatanie zostało włączone dla gracza {player}!"
+    other-disabled: "&cLatanie zostało wyłączone dla gracza {player}!"
+
+  # Komenda god
+  god:
+    enabled: "&aTryb nieśmiertelności został włączony!"
+    disabled: "&cTryb nieśmiertelności został wyłączony!"
+    other-enabled: "&aTryb nieśmiertelności został włączony dla gracza {player}!"
+    other-disabled: "&cTryb nieśmiertelności został wyłączony dla gracza {player}!"
+
+  # Komenda vanish
+  vanish:
+    enabled: "&aTryb niewidzialności został włączony!"
+    disabled: "&cTryb niewidzialności został wyłączony!"
+    other-enabled: "&aTryb niewidzialności został włączony dla gracza {player}!"
+    other-disabled: "&cTryb niewidzialności został wyłączony dla gracza {player}!"
+
+  # Komendy repair
+  repair:
+    success: "&aPrzedmiot został naprawiony!"
+    nothing: "&cNie masz przedmiotu do naprawy!"
+    cannot: "&cTen przedmiot nie może być naprawiony!"
+    not-damaged: "&cTen przedmiot nie jest uszkodzony!"
+
+  repairall:
+    success: "&aNaprawiono {count} przedmiotów!"
+    nothing: "&cNie masz przedmiotów do naprawy!"
+
+  # Komenda AFK
+  afk:
+    enabled: "&7{player} jest teraz AFK"
+    enabled-reason: "&7{player} jest teraz AFK: &e{reason}"
+    disabled: "&7{player} wrócił z AFK &8({duration})"
+
+  # Komendy core (administracyjne)
+  core:
+    reloaded: "&aPlugin został przeładowany pomyślnie!"
+    info: "&6MinecraftCore &7v{version} &7by &b{author}"
+    reload-error: "&cBłąd podczas przeładowywania: {error}"
+
+  # Komenda ping
+  ping:
+    self: "&aTwoje opóźnienie: &e{ping}ms"
+    other: "&aOpóźnienie gracza &b{player}&a: &e{ping}ms"
+    console: "&cKonsola nie ma opóźnienia!"
+
+  # Komenda TPS
+  tps:
+    result: "&aTPS: {tps1} &7(1m), {tps5} &7(5m), {tps15} &7(15m)"
+    memory: "&7Pamięć: &e{used}MB&7/&e{total}MB &7(Max: &e{max}MB&7)"
+    error: "&cBłąd podczas pobierania informacji o TPS!"
+
+  # Komenda uptime
+  uptime:
+    result: "&aSerwer działa od: &e{uptime}"
+    players: "&7Graczy online: &e{online}&7/&e{max}"
+    version: "&7Wersja serwera: &e{version}"
+
+  # Komenda broadcast
+  broadcast:
+    format: "&c[OGŁOSZENIE] &f{message}"
+    usage: "&cUżycie: /broadcast <wiadomość>"
+    sent: "&aWykonano broadcast: &f{message}"
+
+  # Komenda speed
+  speed:
+    usage: "&cUżycie: /speed <1-10> [gracz]"
+    invalid-number: "&cPodaj prawidłową liczbę!"
+    invalid-range: "&cPrędkość musi być między 1 a 10!"
+    success-self: "&aTwoja prędkość została ustawiona na &e{speed}&a!"
+    success-other: "&aPrędkość gracza &b{player} &azostała ustawiona na &e{speed}&a!"
+    target-message: "&aTwoja prędkość została ustawiona na &e{speed}&a!"
+
+  # Komenda gamemode
+  gamemode:
+    usage: "&cUżycie: /gm <survival|creative|adventure|spectator> [gracz]"
+    invalid-mode: "&cNieprawidłowy tryb gry! Dostępne: survival, creative, adventure, spectator"
+    success-self: "&aTwój tryb gry został zmieniony na &e{mode}&a!"
+    success-other: "&aTryb gry gracza &b{player} &azostał zmieniony na &e{mode}&a!"
+    target-message: "&aTwój tryb gry został zmieniony na &e{mode}&a!"
+
+  # Komenda teleport
+  teleport:
+    usage: "&cUżycie: /tp <gracz> [cel]"
+    success-to-player: "&aTeleportowano do gracza &b{player}&a!"
+    success-player-to-player: "&aTeleportowano gracza &b{player1} &ado &b{player2}&a!"
+    target-message: "&aZostałeś teleportowany do gracza &b{player}&a!"
+
+  # Komendy time i weather
+  time:
+    usage: "&cUżycie: /time <set|add> <wartość>"
+    invalid-action: "&cUżyj 'set' lub 'add'!"
+    invalid-value: "&cNieprawidłowa wartość czasu!"
+    set-success: "&aCzas został ustawiony na &e{value}&a!"
+    add-success: "&aDodano &e{value} &ado czasu świata!"
+
+  weather:
+    usage: "&cUżycie: /weather <clear|rain|thunder>"
+    invalid-type: "&cNieprawidłowy typ pogody! Użyj: clear, rain, thunder"
+    clear-success: "&aPogoda została zmieniona na słoneczną!"
+    rain-success: "&aPogoda została zmieniona na deszczową!"
+    thunder-success: "&aPogoda została zmieniona na burzową!"
+
+motd:
+  line1: "&a✦ &fWitaj na &aKnCore Server &f✦"
+  line2: "&7➤ &eGraczy online: &a{online}&7/&a{max}"
+  slots: 100
+
+# Ustawienia pluginu
+settings:
+  show-join-quit-messages: true
+
+  # Czy zapisywać dane graczy po wyjściu
+  save-player-data: false
+
+  # Maksymalna prędkość (1-10)
+  max-speed: 10
